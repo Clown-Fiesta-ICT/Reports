@@ -1,0 +1,16 @@
+PWD /home/riky/Documents/Git/Clown-Fiesta-ICT/Reports
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Prova.tex
+OUTPUT /home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Prova.log
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+INPUT /home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Prova.aux
+INPUT /home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Prova.aux
+OUTPUT /home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Prova.aux
+OUTPUT /home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Prova.pdf
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Prova.aux
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb

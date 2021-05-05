@@ -348,3 +348,9 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Latex
+.aux
+.fls
+.synctex.gz
+.fdb_latexmk
