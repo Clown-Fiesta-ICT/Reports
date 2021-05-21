@@ -1,11 +1,17 @@
 \documentclass{report}
 \usepackage{graphicx}
+\usepackage{color}
+\definecolor{ForestGreen}{RGB}{100, 200, 45}
+
 \graphicspath{ {/home/riky/Pictures/Wallpapers/Misc/} }
 \author{Oglietti Riccardo \\ Ye, it's a \LaTeX{}}
 \title{Prove Sparse}
 \date{\today}
 
 \begin{document}
+\begin{abstract}
+    Il documento parlera' di nulla, con del nulla su lol perche' avevo quell'immagine a portata.
+\end{abstract}
     \maketitle
     First document. This is a simple example, with no extra
     parameters or pakage included.
@@ -16,13 +22,29 @@
     \end{itemize}
     Altro coso, seguito da un newpage
     \newpage
-    Lerolerolerolerolerolerolero\linebreak
-    %\begin{figure}\h
-        \includegraphics [width=12cm] {Zyra.jpg}
-        \linebreak
-        %\includegraphics [scale=0.3] {Zyra.jpg}
-    %\end{figure}
-    \\
-    Questo e' il mio main su lol, fa pew pew con le piantine
+    Lerolerolerolerolerolerolero
+
+    \begin{figure}[h]
+        \centering
+        %\includegraphics [width=12cm] {Zyra.jpg}
+        \includegraphics [scale=0.3] {Zyra.jpg}
+        \caption{actually nice}
+        \label{fig:Zyra}
+    \end{figure}
+
+    Quella in figura \ref{fig:Zyra} e' il mio main su \underline{lol}, fa \textit{pew pew} con le \textbf{piantine}
+    Questa \emph{frase} necessita di enfasi varie, cosi' mi pare un po' \textit{troppo \textbf{moscia}.}
+
+    Zyra ha quattro abilita' fondamentali, come molti atlry campioni,
+    \begin{enumerate}
+        \item Q, Deadly Spines, fa \emph{cose} con delle spine a 90 gradi rispetto a lei, se per qualche motivo colpisce un bocciolo, quello spara come fosse uno scolaro americano
+        \item W, Rampant Growth, pianta boccioli strani, se vengono colpiti dalla Q o dalla E diventano piante.
+        \item E, Grasping Roots, lacia una striscia di piante davanri a se che rootta gli avversari, e fa \textbf{male}.
+        \item R, StrangleThorns, fa male, da airborne ai nemici, e le piante li intorno diventano dei faking \textcolor{ForestGreen}{mitragliatrici}.
+    \end{enumerate}
+    Anche presente una passiva, che fa spownare boccioli nelle vicinanze a caso.
+    Da notare com abbia appena un ban rate del 2\%, molto basso se confrontato con il 52\% di vittorie in s11
+    Moltiplicati fanno $104=2*52$, che e' un valore sicuramente inutile in quanto calcolato a caso.
+    
 
 \end{document}
