@@ -2,6 +2,7 @@
 \usepackage{graphicx}
 \usepackage{color}
 \definecolor{ForestGreen}{RGB}{100, 200, 45}
+\definecolor{ApBlue}{RGB}{75, 0, 200}
 
 \graphicspath{ {/home/riky/Pictures/Wallpapers/Misc/} }
 \author{Oglietti Riccardo \\ Ye, it's a \LaTeX{}}
@@ -20,14 +21,29 @@
         \item Item 2
         \item Item 3
     \end{itemize}
+    Questa e' una tabella!
+    \begin{center}
+        \begin{tabular}{ |c|c|c| }
+            \hline
+            Num & Num & Num \\ [0.5ex] %lo 0.5 e' lo spazio sotto la riga se non ho capito male
+            \hline\hline
+            1 & 2 & 3 \\
+            \hline
+            4 & 5 & 6 \\
+            \hline
+            7 & 8 & 9 \\
+            \hline
+        \end{tabular}
+    \end{center}
     Altro coso, seguito da un newpage
     \newpage
-    Lerolerolerolerolerolerolero
+    \chapter{Zyra}
 
+    \section{Il Pick}
     \begin{figure}[h]
         \centering
-        %\includegraphics [width=12cm] {Zyra.jpg}
-        \includegraphics [scale=0.3] {Zyra.jpg}
+        \includegraphics [width=12cm] {Zyra.jpg}
+        %\includegraphics [scale=0.3] {Zyra.jpg}
         \caption{actually nice}
         \label{fig:Zyra}
     \end{figure}
@@ -37,14 +53,44 @@
 
     Zyra ha quattro abilita' fondamentali, come molti atlry campioni,
     \begin{enumerate}
-        \item Q, Deadly Spines, fa \emph{cose} con delle spine a 90 gradi rispetto a lei, se per qualche motivo colpisce un bocciolo, quello spara come fosse uno scolaro americano
-        \item W, Rampant Growth, pianta boccioli strani, se vengono colpiti dalla Q o dalla E diventano piante.
-        \item E, Grasping Roots, lacia una striscia di piante davanri a se che rootta gli avversari, e fa \textbf{male}.
-        \item R, StrangleThorns, fa male, da airborne ai nemici, e le piante li intorno diventano dei faking \textcolor{ForestGreen}{mitragliatrici}.
+        \item Q, \textbf{Deadly Spines}, fa \emph{cose} con delle spine a 90 gradi rispetto a lei, se per qualche motivo colpisce un bocciolo, quello spara come fosse uno scolaro americano
+        \item W, \textbf{Rampant Growth}, pianta boccioli strani, se vengono colpiti dalla Q o dalla E diventano piante.
+        \item E, \textbf{Grasping Roots}, lacia una striscia di piante davanri a se che rootta gli avversari, e fa \textbf{male}.
+        \item R, \textbf{Strangle Thorns}, fa male, da airborne ai nemici, e le piante li intorno diventano dei faking \textcolor{ForestGreen}{mitragliatrici}.
     \end{enumerate}
+    \subsection{Le info teciche}
     Anche presente una passiva, che fa spownare boccioli nelle vicinanze a caso.
     Da notare com abbia appena un ban rate del 2\%, molto basso se confrontato con il 52\% di vittorie in s11
     Moltiplicati fanno $104=2*52$, che e' un valore sicuramente inutile in quanto calcolato a caso.
     
+    \section{I counterpick}
+    Generalmente i Counterpick principali di Zyra sono Blitz, perche' non so schivare i suoi benedetti grub, e Bard, perche' esce fuori dal nulla e fa casino.
+    Nonostante tecnicamente bard sia piu' efficace, continuo a banare Bliz perche' mi piace di meno giocarci contro.
+
+    \newpage
+    \chapter{Seraphine}
+
+    \section{Il Pick}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=12cm] {Seraphine.jpg}
+        \caption{E-Girl champ}
+        \label{fig:Seraphine}
+    \end{figure}
+
+    Il campione in figura \ref{fig:Seraphine} e' un altro pick confuso che uso su \emph{LOL}, definito E-Girl champ per ovvie motivazioni.
+    Consiglio a chiunque abbia voglia di giocarlo di mutarla appena in partita, diventa /textit{molto} fastidiosa.
+    
+    Le quattro abilita' di seraphine sono le seguenti:
+    \begin{enumerate}
+        \item Q, \textbf{High Note}, fa spash damage in un range medio ampio, fa fino al 50\% di \textit{danno} in piu' in base alla salute mancante dell'avversario.
+        \item W, \textbf{Surround Sound}, garantisce scudo, movement speed e danno \textcolor{ApBlue}{AP} agli alleati nelle vicinanze, se e' attiva la\nolinebreak
+        la passiva, fa anche recuperare vita a tutti quelli in torno in un modo strano che non ho capito benissimo.
+        \item E, \textbf{Beat Drop}, manda un inpulso orizzontale con un range sbroccato che fa danno \textcolor{ApBlue}{AP}, slowa per 1 secondo, se il champ e' gia slowato rootta.
+        \item R, \textbf{Encore}, altro inpulso orizzontale, charma e slowa chi incontra. Refresha il range ogni volta che passa su un champ alleato o nemico. e, Fa anche abbastanza danno.
+    \end{enumerate}
+    \subsection{Passiva}
+    La passiva di Seraphine e' abbastanza balorda, ogni due abilita' lanciate, la terza viene castata una seconda volta subito dopo senza costare mana.\nolinebreak
+    Poi, ogni volta che viene castata un abilita' vengono messe delle "Note" dal comportamento vagamente oscuro che fanno male durante il successivo auto di Seraph.
 
 \end{document}
