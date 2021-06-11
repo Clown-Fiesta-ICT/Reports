@@ -354,3 +354,4 @@ MigrationBackup/
 .fls
 .synctex.gz
 .fdb_latexmk
+.ilg
