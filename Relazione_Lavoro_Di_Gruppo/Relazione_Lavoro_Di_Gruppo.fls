@@ -25,6 +25,7 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+OUTPUT /home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gruppo/Relazione_Lavoro_Di_Gruppo.idx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gruppo/Relazione_Lavoro_Di_Gruppo.aux
@@ -50,6 +51,8 @@ OUTPUT /home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gru
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gruppo/Relazione_Lavoro_Di_Gruppo.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
