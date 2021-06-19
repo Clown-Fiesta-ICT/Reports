@@ -2,7 +2,7 @@
 \usepackage{graphicx}
 \usepackage{color}
 \definecolor{Green}{RGB}{100, 200, 45}
-\definecolor{Blue}{RGB}{75, 0, 200}
+\definecolor{Blue}{RGB}{60, 0, 250}
 \definecolor{Red}{RGB}{255, 0, 0}
 \definecolor{Purple}{RGB}{60, 26, 78}
 \renewcommand{\chaptername}{Capitolo}
@@ -19,6 +19,7 @@
 
 \begin{document}
     \maketitle
+    \tableofcontents
     \chapter{Introduzione}
         \section{La Sfida}
             Il progetto che mi accingo a descrivere e' nato come figlio del corso \emph{Learning By Project} a opera dei docenti 
@@ -74,15 +75,61 @@
              evidenziato. Abbiamo poi deciso di usare lo strumento \emph{GIT} per coordinare la gestione dei documenti
              prodotti da ogni membro del gruppo. Infine, abbiamo optato per lo strumento di conferenza \emph{Discord} per
              gestire gli incontri in remoto al di fuori dell'orario scolastico.
-        \section{Strumenti tecnici}
+        \section{Strumenti Tecnici}
             La selezione degli stumenti tecnici si e' invece rivelata piu' ardua, l'ostacolo piu' grande e' stato coordinare
              le necessita' di ognuno all'interno di un set di strumenti congduo agli obbiettivi del progetto.
             Per quanto riguarda la stesura di relazioni e documenti, abbiamo optato per l'utilizzo del linguaggio \LaTeX,
              esso permette di strutturare documenti estremamente complessi mantenendo una relativa semplicita' di utilizzo.
-             Inoltre l'integrazione con lo strumento di sviluppo collaborativo \emph{GIT} e' ottima, e ha permesso di
-             ottimizzare lo sforzo comune.
-            %Per facilitare la nostra organizzazione interna abbiamo da subito deciso di assegnare un colore a ogni membro, 
-             %tramite questo espediente ci e' stato piu' facile organizzare il lavoro e i compiti di ognuno in maniera 
-             %chiara e visuale.
+             Inoltre l'integrazione con lo strumento di sviluppo collaborativo \emph{git} e' ottima, e ha permesso di
+             ottimizzare lo sforzo comune. Da notare poi la possibilita' di gestire i documenti tramite il comodo sistema
+             basato su commit sul quale si basa \emph{git}, e' stato largamente piu' semplice gestire le revisioni
+             collaborative per qualsivoglia documento, e la scrittura collaborativa, indispensabile per la redazione delle
+             relazioni.
+            Per cio' che concerne invece la creazione di diagrammi di rete, e' stato scelto lo strumento gratuito
+             \emph{Drow.io}, si tratta di una Webapp atta a creare rappresentazioni grafiche di qualsiasi genere,
+             il tool e' stato scelto per via della sua semplicita' d'uso e della possibilita' di esportare liberamente
+             i documenti creati.
+        \section{Definizione Dei Ruoli}
+            Infine, abbiamo deciso di operare alcune scelte organizzative a nostro avviso opportune per poter gestire il
+             progetto nella sua interezza. Abbiamo optato per un organizzazione basata su una suddivisione in ruoli, con
+             mansioni specifiche e meidamente lunghe, per poi coordinare gli sforzi durante meeting con catenza settimanale.
+            Per facilitare la nostra organizzazione interna abbiamo da subito deciso di assegnare un colore a ogni membro,
+             tramite questo espediente ci e' stato piu' facile organizzare il lavoro e i compiti di ognuno in maniera chiara
+             e visuale. 
+            La suddivisione e' quindi risultata come segue: 
+            \begin{center}
+                \begin{tabular}{ |c|c| }
+                    \hline
+                    Nome Componente & Compito Assegnato \\
+                    \hline \hline
+                    \textcolor{Blue}{Catone Mario} & \textcolor{Blue}{Active Directory} \\
+                    \hline
+                    \textcolor{Purple}{Oglietti Riccardo} & \textcolor{Purple}{Reportistica e presentazione} \\
+                    \hline
+                    \textcolor{Red}{Serena Thomas} & \textcolor{Red}{Firewall e sicurezza} \\
+                    \hline
+                    \textcolor{Green}{Volgarino Livio} & \textcolor{Green}{Topoogia di rete e routing} \\
+                    \hline
+                \end{tabular}
+            \end{center}
+            Questa particolare suddivisione dei ruoli e' nata dopo un confronto sulle nostre tematiche di interesse, e sui
+             nostri punti di forza principali. Per citare un esempio, \textcolor{Blue}{Catone Mario} a scelto la sua mansione
+             dopo aver seguito con interesse il corso proposto per l'amministrazione di sistemi basati su \emph{Windows e MS
+             Active Directory} di Cristante Fabrizio e aver riscontrato un grande interesse sulla tematica. Invece,
+             \textcolor{Red}{Serena Thomas}, rimasto molto colpito dalle implicazioni legate alla sicurezza studiate e
+             sperimentate durante il corso di \emph{Firewall} a opera di Vedovato Alberto, ha deciso di intraprendere
+             questa mansione.
+
+    \chapter{Diagramma Di Rete E Topologia}
+        \author{Volgarino Livio}
+        \section{La Struttura In Generale}
+        Come precedentemente specificato, la struttura di rete e' stata ideata principalmente da Volgarino Livio, ed e'
+         stata progettata dedicando particolare attenzione ad alcuni aspetti giudicati pilastri fondamentali del progetto.
+    \chapter{Sicurezza E Firewall}
+        \author{Serena Thomas}
+    \chapter{Microsoft Active Directory E Windows Licensing}
+        \author{Catone Mario}
+    \chapter{Considerazioni Finali}
+            
 
 \end{document}
