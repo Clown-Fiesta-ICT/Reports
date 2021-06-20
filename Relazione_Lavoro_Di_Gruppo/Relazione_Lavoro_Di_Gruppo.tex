@@ -123,8 +123,19 @@
     \chapter{Diagramma Di Rete E Topologia}
         \author{Volgarino Livio}
         \section{La Struttura In Generale}
-        Come precedentemente specificato, la struttura di rete e' stata ideata principalmente da Volgarino Livio, ed e'
-         stata progettata dedicando particolare attenzione ad alcuni aspetti giudicati pilastri fondamentali del progetto.
+        Come precedentemente specificato, la struttura di rete e' stata ideata principalmente da Volgarino Livio, ed e
+         implementata dedicando particolare attenzione ad alcuni aspetti giudicati pilastri fondamentali del progetto:
+         \begin{itemize}
+             \item La separazione delle reti, e' stato scelto di progettare due reti separate e largamente indipendenti
+              in modo da rendere piu' agevole l'installazione e il mantenimento, inoltre un eventuale fallimento
+              dell'infrastruttura in uno dei due edifici non penalizzerebbe la didattica all'interno del secondo plesso.
+             \item L'utilizzo di indirizzamento statico per i dispositivi fissi, propri dell'istituto (quali per esempio
+              postazioni all'interno dei laboratori informatici in ambo i plessi), estremamente utile per mantenere un'
+              estrema semplicita' di gestione e di troubleshooting
+             \item Filtraggio di tutto il traffico da parte di router/firewall che agiscono da endpoint per ognuno dei due
+              plessi, cio' permette di innalzare lo standard di sicurezza, in quanto tutto il traffico nella sua interezza
+              viene analizzato.
+         \end{itemize}
     \chapter{Sicurezza E Firewall}
         \author{Serena Thomas}
     \chapter{Microsoft Active Directory E Windows Licensing}
