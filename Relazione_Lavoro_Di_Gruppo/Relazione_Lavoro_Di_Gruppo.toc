@@ -10,4 +10,5 @@
 \contentsline {section}{\numberline {3.2}Il Diagramma}{7}{}%
 \contentsline {chapter}{\numberline {4}Sicurezza E Firewall}{8}{}%
 \contentsline {chapter}{\numberline {5}Microsoft Active Directory E Windows Licensing}{9}{}%
+\contentsline {section}{\numberline {5.1}Infrastruttura Hardware}{9}{}%
 \contentsline {chapter}{\numberline {6}Considerazioni Finali}{10}{}%
