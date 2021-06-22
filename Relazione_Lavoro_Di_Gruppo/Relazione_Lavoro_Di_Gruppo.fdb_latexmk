@@ -1,14 +1,14 @@
 # Fdb version 3
-["makeindex Relazione_Lavoro_Di_Gruppo.idx"] 1623521492 "Relazione_Lavoro_Di_Gruppo.idx" "Relazione_Lavoro_Di_Gruppo.ind" "Relazione_Lavoro_Di_Gruppo" 1624376872
-  "Relazione_Lavoro_Di_Gruppo.idx" 1624376871 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex Relazione_Lavoro_Di_Gruppo.idx"] 1623521492 "Relazione_Lavoro_Di_Gruppo.idx" "Relazione_Lavoro_Di_Gruppo.ind" "Relazione_Lavoro_Di_Gruppo" 1624392008
+  "Relazione_Lavoro_Di_Gruppo.idx" 1624392008 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "Relazione_Lavoro_Di_Gruppo.ind"
   "Relazione_Lavoro_Di_Gruppo.ilg"
-["pdflatex"] 1624376871 "/home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gruppo/Relazione_Lavoro_Di_Gruppo.tex" "/home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gruppo/Relazione_Lavoro_Di_Gruppo.pdf" "Relazione_Lavoro_Di_Gruppo" 1624376872
+["pdflatex"] 1624392007 "/home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gruppo/Relazione_Lavoro_Di_Gruppo.tex" "/home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gruppo/Relazione_Lavoro_Di_Gruppo.pdf" "Relazione_Lavoro_Di_Gruppo" 1624392008
   "/etc/texmf/web2c/texmf.cnf" 1623516661 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/riky/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1620654988 11524 92ad3aa9daec5f40ea1b64fad17f3ee2 ""
-  "/home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gruppo/Relazione_Lavoro_Di_Gruppo.aux" 1624376871 2017 4029d322b0c604a8ef4994701420d2d2 ""
-  "/home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gruppo/Relazione_Lavoro_Di_Gruppo.tex" 1624376871 10700 2f1d626f31f186fc45cc1b5f595b7660 ""
+  "/home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gruppo/Relazione_Lavoro_Di_Gruppo.aux" 1624392008 2528 ed3cde3a2180fa91755e1e95b360f7e0 ""
+  "/home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gruppo/Relazione_Lavoro_Di_Gruppo.tex" 1624392007 14429 018d547612752a13d4469a7de41894b4 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -29,6 +29,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/latex/base/report.cls" 1601675358 23204 74c91ecbcc47161218f25d9d0651c0f7 ""
@@ -48,15 +49,15 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1613593815 38841 799d1dd9682a55ce442e10c99777ecc1 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1623517287 75955 f78456fd1308dc295dc476a68e28d85b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1623517290 1283505 08bad8a42f3e887aee2a6824be09251a ""
-  "Relazione_Lavoro_Di_Gruppo.aux" 1624376871 2017 4029d322b0c604a8ef4994701420d2d2 "pdflatex"
+  "Relazione_Lavoro_Di_Gruppo.aux" 1624392008 2528 ed3cde3a2180fa91755e1e95b360f7e0 "pdflatex"
   "Relazione_Lavoro_Di_Gruppo.ind" 1623882716 0 d41d8cd98f00b204e9800998ecf8427e "makeindex Relazione_Lavoro_Di_Gruppo.idx"
-  "Relazione_Lavoro_Di_Gruppo.tex" 1624376871 10700 2f1d626f31f186fc45cc1b5f595b7660 ""
-  "Relazione_Lavoro_Di_Gruppo.toc" 1624376871 954 fd2962f13f75e7f4565c6f6fd2c48c98 "pdflatex"
+  "Relazione_Lavoro_Di_Gruppo.tex" 1624392007 14429 018d547612752a13d4469a7de41894b4 ""
+  "Relazione_Lavoro_Di_Gruppo.toc" 1624392008 1301 d79662c101d4d67b8e5eba4714e8de88 "pdflatex"
   (generated)
-  "Relazione_Lavoro_Di_Gruppo.aux"
-  "Relazione_Lavoro_Di_Gruppo.idx"
+  "/home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gruppo/Relazione_Lavoro_Di_Gruppo.log"
   "/home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gruppo/Relazione_Lavoro_Di_Gruppo.pdf"
   "Relazione_Lavoro_Di_Gruppo.pdf"
   "Relazione_Lavoro_Di_Gruppo.toc"
-  "/home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gruppo/Relazione_Lavoro_Di_Gruppo.log"
+  "Relazione_Lavoro_Di_Gruppo.idx"
+  "Relazione_Lavoro_Di_Gruppo.aux"
   "Relazione_Lavoro_Di_Gruppo.log"

@@ -26,8 +26,8 @@
             Il progetto che mi accingo a descrivere e' nato come figlio del corso \emph{Learning By Project} a opera dei docenti 
              Bardi Laura Silvia e Blachietti Andrea. In esso ci e' stato richiesto di progettare una nuova infrastruttura di 
              rete atta a rimpiazzare l'intera infrastruttura di una scuola superiore Piemontese. La scuola e' divisa in due 
-             gruppi di edifici, i quali contengono le sedi di tre differenti indirizzi: Liceo Scientifico delle Scienze 
-             Applicate a Indirizzo Informatico, Istituto Tecnico Economico e infine Liceo Linguistico.
+             gruppi di edifici, i quali contengono le sedi di tre differenti indirizzi: \textbf{Liceo Scientifico delle Scienze 
+             Applicate a Indirizzo Informatico}, \textbf{Istituto Tecnico Economico} e infine \textbf{Liceo Linguistico}.
 
             Entrambi i gruppi di edifici sono composti da tre piani, il primo gruppo e' formato da tre edifici, in due 
              dei quali sono concentrate aule, laboratori e locali amministrativi. Nella terza e' poi disposta la palestra
@@ -145,10 +145,70 @@
         \author{Serena Thomas}
     \chapter{Microsoft Active Directory E Windows Licensing}
         \author{Catone Mario}
-        \section{Infrastruttura Hardware}
+        \section{Domain Controller}
         L'ambiente \emph{MS Active Directory} e' il cuore pulsante dell'intera infrastruttura di rete, in quanto tutta 
          la gestione dell'autenticazione, e dei relativi permessi dedicati a ogni singolo utente, dagli amministratori
-         di sistema agli studenti, viene gestita tramite questo sitema. E' quindi
+         di sistema agli studenti, viene gestita tramite questo sitema.
+        Abbiamo optato per una configurazione basata su due domain controller, uno per plesso, in modo da garantire la
+         continuita' del servizio anche in caso di problemi hardware.
+        Le macchine sono strutturate come segue:
+        \begin{itemize}
+        \item DC01:
+            \begin{itemize}
+            \item Dell Smart Value PowerEdge T140 con 1TB HDD, 2c/2t e 8GB di RAM ECC. \textcolor{Red}{$\rightarrow$ da rivedere con Xeon}
+            \item Windows Server 2019 Standard Edition Desktop Experience. %richiesta revisione
+            \end{itemize}
+        \item DC02: 
+            \begin{itemize}
+            \item Dell Smart Value PowerEdge T140 con 1TB HDD, 2c/2t e 8GB di RAM ECC. \textcolor{Red}{$\rightarrow$ da rivedere con Xeon}
+            \item Windows Server 2019 Standard Edition. %richiesta revisione
+            \end{itemize}
+        \end{itemize}
+        Le macchine sopracitate, seppur dotate di perfomance modeste in relazione agli standard odierni, offrono un ottimo 
+         rapporto qualita' prezzo, inoltre, entrambi i \emph{Domain Controller} non si troveranno a gestire mansioni 
+         particolarmente intensive dal punto di vista computazionale.
+        Le funzioni principali di queste due macchine sono sintetizzabili come segue:
+        \begin{enumerate}
+            \item Server di autenticazione per l'intera infrastruttura.
+            \item Mail server per docenti e personale amministrativo.
+            \item Gestione Shared Directory.
+            \item Gestione Roaming Profiles.
+        \end{enumerate}
+            \subsection{Server Di Autenticazione}
+            Il ruolo di \textbf{Server Di Autenticazione} da parte del \emph{Domain Controller} e' di vitale importanza
+             per il corretto funzionamento dell'infrastruttura nel suo complesso. Esso permette di gestire su base di 
+             gruppi o di singoli utenti molti aspetti dell'esperienza utente, che possono variare dalla configurazione
+             dell'ambiente desktop e del menu' start, a eventuali permessi di scrittura, lettura e amministrazione di
+             directory condivise, fino alla possibilita' di amministrare il sistema nella sua interezza.
+            
+            In tutto cio' le \emph{Organizational Unit} anche dette \textbf{OU} assumono un ruolo fondamentale. Si 
+             tratta di "Cartelle", atte a organizzare gli utenti in sottogruppi per renderne la gestione piu' agevole,
+             nel nostro caso, abbiamo ritenuto opportuno suddividere gli utenti come segue:
+
+            \begin{itemize}
+                \item Liceo Scientifico delle Scienze Applicate a Indirizzo Informatico:
+                    \begin{itemize}
+                        \item OU Studenti Liceo
+                        \item OU Docenti Liceo
+                        \item OU Personale Scolastico
+                    \end{itemize}
+                \item Liceo Linguistico:
+                    \begin{itemize}
+                        \item OU Studenti Liceo
+                        \item OU Docenti Liceo
+                        \item OU Personale Scolastico
+                    \end{itemize}
+                \item Istituto Tecnico Economico:
+                    \begin{itemize}
+                        \item OU Studenti Economico
+                        \item OU Docenti Economico
+                        \item OU Personale Scolastico
+                    \end{itemize}
+            \end{itemize}
+            I motivi di questa particolare suddivisione sono presto detti: %richiesta revisione
+            \subsection{Server Mail}
+            \subsection{Gestione e Immagazzinamento Shared Directory}
+            \subsection{Gestione Roaming Profiles e Persistenza Profili Utenti}
     \chapter{Considerazioni Finali}
             
 
