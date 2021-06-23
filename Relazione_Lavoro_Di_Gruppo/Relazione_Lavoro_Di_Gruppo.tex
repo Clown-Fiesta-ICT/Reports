@@ -132,7 +132,7 @@
               dell'infrastruttura in uno dei due edifici non penalizzerebbe la didattica all'interno del secondo plesso.
              \item L'utilizzo di indirizzamento statico per i dispositivi fissi, propri dell'istituto (quali per esempio
               postazioni all'interno dei laboratori informatici in ambo i plessi), estremamente utile per mantenere un'
-              estrema semplicita' di gestione e di troubleshooting
+              estrema semplicita' di gestione e di troubleshooting.
              \item Filtraggio di tutto il traffico da parte di router/firewall che agiscono da endpoint per ognuno dei due
               plessi, cio' permette di innalzare lo standard di sicurezza, in quanto tutto il traffico nella sua interezza
               viene analizzato.
@@ -155,17 +155,29 @@
         \begin{itemize}
         \item DC01:
             \begin{itemize}
-            \item Dell Smart Value PowerEdge R240 - Xeon E-2234 (4c/8t), 1x16GB UDIMM ECC 3200MT/s, Windows Server 2019
-             NO CAL, 2x4TB HDD 7.2k RPM 512n, Dual Port 1Gb ethernet card. $\rightarrow$ €1974+IVA.
+            \item Dell Smart Value PowerEdge R240
+                \begin{itemize}
+                    \item Xeon E-2234 (4c/8t).
+                    \item 1x16GB UDIMM ECC 3200MT/s.
+                    \item 2x4TB HDD 7.2k RPM 512n.
+                    \item Dual Port 1Gb ethernet card.
+                \end{itemize}
+            %$\rightarrow$ €1974+IVA.
             %vedere anche HPE
             \item Windows Server 2019 Standard Edition Desktop Experience.
-            \end{itemize}
+            \end{itemize}\newpage
         \item DC02: 
             \begin{itemize}
-            \item Dell Smart Value PowerEdge R240 - Xeon E-2234 (4c/8t), 1x16GB UDIMM ECC 3200MT/s, Windows Server 2019
-             NO CAL, 2x4TB HDD 7.2k RPM 512n, Dual Port 1Gb ethernet card. $\rightarrow$ €1974+IVA.
+            \item Dell Smart Value PowerEdge R240
+                \begin{itemize}
+                    \item Xeon E-2234 (4c/8t).
+                    \item 1x16GB UDIMM ECC 3200MT/s.
+                    \item 2x4TB HDD 7.2k RPM 512n.
+                    \item Dual Port 1Gb ethernet card.
+                \end{itemize}
+            %$\rightarrow$ €1974+IVA.
             %vedere anche HPE
-            \item Windows Server 2019 Standard Edition.
+            \item Windows Server 2019 Standard Edition Desktop Experience.
             \end{itemize}
         \end{itemize}
         Le macchine sopracitate, seppur dotate di perfomance modeste in relazione agli standard odierni, offrono un ottimo 
@@ -174,7 +186,6 @@
         Le funzioni principali di queste due macchine sono sintetizzabili come segue:
         \begin{enumerate}
             \item Server di autenticazione per l'intera infrastruttura.
-            \item Mail server per docenti e personale amministrativo.
             \item Gestione Shared Directory.
             \item Gestione Roaming Profiles.
         \end{enumerate}
@@ -192,25 +203,30 @@
             \begin{itemize}
                 \item Liceo Scientifico delle Scienze Applicate a Indirizzo Informatico:
                     \begin{itemize}
-                        \item OU Studenti Liceo
-                        \item OU Docenti Liceo
-                        \item OU Personale Scolastico
+                        \item OU Studenti Liceo Scientifico
+                        \item OU Docenti Liceo Scientifico
+                        \item OU Personale Amministrativo Scientifico
+                        \item OU Sysadmin
+                        \item OU Personale ATA
                     \end{itemize}
                 \item Liceo Linguistico:
                     \begin{itemize}
-                        \item OU Studenti Liceo
-                        \item OU Docenti Liceo
-                        \item OU Personale Scolastico
+                        \item OU Studenti Liceo Linguistico
+                        \item OU Docenti Liceo Linguistico
+                        \item OU Personale Amministrativo Linguistico
+                        \item OU Sysadmin
+                        \item OU Personale ATA
                     \end{itemize}
                 \item Istituto Tecnico Economico:
                     \begin{itemize}
-                        \item OU Studenti Economico
-                        \item OU Docenti Economico
-                        \item OU Personale Scolastico
+                        \item OU Studenti Tecnico Economico
+                        \item OU Docenti Tecnico Economico
+                        \item OU Personale Amministrativo Tecnico Economico
+                        \item OU Sysadmin
+                        \item OU Personale ATA
                     \end{itemize}
             \end{itemize}
             I motivi di questa particolare suddivisione sono presto detti: %richiesta revisione
-            \subsection{Server Mail}
             \subsection{Gestione e Immagazzinamento Shared Directory}
             \subsection{Gestione Roaming Profiles}
     \chapter{Considerazioni Finali}
