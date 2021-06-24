@@ -15,6 +15,7 @@
 \title{Relazione Lavoro Di Gruppo\\
 \large Gruppo 2, Clown-Fiesta-ICT}
 \date{\today}
+%Gestire tutte le parole che vanno a capo secondo la divisione in sillabe italiana
 
 \makeindex
 
@@ -128,7 +129,7 @@
         Come precedentemente specificato, la struttura di rete e' stata ideata principalmente da Volgarino Livio, ed e
          implementata dedicando particolare attenzione ad alcuni aspetti giudicati pilastri fondamentali del progetto:
          \begin{itemize}
-             \item La separazione delle reti: e' stato scelto di progettare due reti separate e largamente indipendenti
+             \item La separazione delle reti: e' stato scelto di progettare due reti separate e largamente indipe ndenti
               in modo da rendere piu' agevole l'installazione e il mantenimento, inoltre un eventuale fallimento
               dell'infrastruttura in uno dei due edifici non penalizzerebbe la didattica all'interno del secondo plesso.
              \item L'utilizzo di indirizzamento statico per i dispositivi fissi, propri dell'istituto (quali, per esempio,
@@ -244,9 +245,9 @@
             Da notare come gli account utente di Preside e Vicepreside sono stati lasciati al di fuori della
              classificazione, data la particolarita' e unicita' dei loro ruoli.
             \subsection{Gestione Shared Directory}
-            Durante l'analisi portata avanti, abbiamo riscontrato la necessita' di creare un minimo di tre
-             \textbf{Shared Directory} principali per ognuno dei tre differenti indirizzi che compongono il nostro
-             caso di studio, che vanno poi a coniugarsi in ulteriori suddivisioni per assicurare la granularita'
+            Durante l'analisi portata avanti, abbiamo riscontrato la necessita' di creare tre \textbf{Shared 
+             Directory} principali per ognuno dei tre differenti indirizzi che compongono il nostro caso
+             di studio, che vanno poi a coniugarsi in ulteriori suddivisioni per assicurare la granularita'
              richiesta. Esse sono configurate come segue:
             \begin{itemize}
             \item Shared Directory \textit{"Studenti"}:
@@ -273,13 +274,27 @@
                 \begin{itemize}
                     \item Date le particolari necessita' dal punto di vista della privacy, \emph{Docenti} e
                      \emph{Studenti} non avranno nessun accesso alla \textbf{Direcotry}.
-                    \item \emph{Sysadmin} 
+                    \item \emph{Sysadmin}, \emph{Personale Amministrativo} e gli account singoli di
+                     \emph{Preside} e \emph{Vicepreside} avranno permessi di controllo totale sulla
+                     \textbf{Directory}, compresa la possibilita' di modificarne la struttura in caso
+                     di necessita'.
                 \end{itemize}
             \end{itemize}
             Da segnalare come Preside, Vicepreside e l'intera \textbf{OU} \emph{Sysadmin} siano muniti di
              \emph{"Full Conrol"} su l'intera \textbf{Directory} \emph{Docenti} e \emph{Studenti}, come di
              consueto ad eccezione della possibilita' di modificarne la struttura.
             \subsection{Gestione Roaming Profiles}
+            La gestione dei \textbf{Roaming Profiles} e' sicuramente una sezione fondamentale dell'infrastruttura
+             \emph{Active Directory} da noi proposta. Tramite opportune configurazioni e' possibile associare 
+             a ciascun account un differente profilo, in questo modo un utente puo' effettuare il log-in da un
+             qualisasi computer collegato all'infrastruttura e mantenere tutti i suoi file e permessi.
+            Cio' permette un duplice beneficio, mobilita' e sicurezza. Innanzitutto e' da considerare come 
+             un qualisasi studente o professore possa accedere ai suoi progetti e dati da qualsiasi macchina 
+             all'interno di entrambi i gruppi di edifici facenti parte del complesso scolastico. Dal punto 
+             di vista della sicurezza invece possiamo notare come la gestione dei permessi e' relativa al
+             login dell'utente, non alla macchina in se. Cio' rende l'infrastruttura piu' sicura, in quanto
+             la condizione di accesso si sposta dal semplice accesso fisico alla macchina, all'ottenimento dei
+             dati di accesso di un account con privilegi elevati.
     \chapter{Considerazioni Finali}
             
 
