@@ -7,6 +7,8 @@
 \definecolor{Purple}{RGB}{60, 26, 78}
 \renewcommand{\chaptername}{Capitolo}
 \renewcommand{\contentsname}{Indice}
+\renewcommand{\figurename}{Immagine}
+\graphicspath{ {/home/riky/Documents/Git/Clown-Fiesta-ICT/Reports/Relazione_Lavoro_Di_Gruppo/Immagini_Relazione/} }
 
 \author{Catone Mario,\\
     Oglietti Riccardo,\\
@@ -99,7 +101,7 @@
             Per facilitare la nostra organizzazione interna abbiamo da subito deciso di assegnare un colore a ogni membro,
              tramite questo espediente ci e' stato piu' facile organizzare il lavoro e i compiti di ognuno in maniera chiara
              e visuale. 
-            La suddivisione e' quindi risultata come segue: 
+            La suddivisione e' quindi risultata come segue:
             \begin{center}
                 \begin{tabular}{ |c|c| }
                     \hline
@@ -142,7 +144,22 @@
         Andremo ora a spiegare nel dettaglio l'architettura, aiutati dal diagramma di rete redatto tramite il precedentemente
          citato strumento di creazione grafici e diagrammi \emph{Draw.io}.
         \section{Il Diagramma}
-        La rete nel suo complesso puo' essere riassunta tramite l'utilizzo di questo diagramma:
+        La rete nel suo complesso puo' essere riassunta tramite l'ausilio del seguente diagramma:
+
+        \begin{figure} [h]
+            \centering
+            %\includegraphics [scale=0.1] {Schema_Di_Rete_Completo_1.png}
+            \includegraphics [width=12cm] {Schema_Di_Rete_Completo_1.png}
+            \caption{Topologia di rete per ambo i plessi scolastici.}
+            \label{fig:Diagramma Di Rete}
+        \end{figure}
+        Partendo dall'alto, possiamo sibito notare la disposizione e la configurazione dei \emph{New Generation Firewall},
+         data l'enorme importanza che ricoprono all'interno della nostra infrastruttura, abbiamo deciso di optare per una
+         macchina fisica ridondata, per mitigare qualsiasi problema di compromissione anche fisica dell'apparato.
+        
+        Un approccio simile e' stato adottato anche per quanto riguarda la gestione dei \emph{Core Switch}, essendo
+         il cardine della rete per quanto riguarda l'instradamento dei pacchetti, e' stato scelto di ridondarli fiscamente
+         permettendo quindi una piu' elevata tolleranza ad eventuali guasti.
     \chapter{Sicurezza E Firewall}
         \author{Serena Thomas}
     \chapter{Microsoft Active Directory e Windows Licensing}
@@ -150,7 +167,7 @@
         \section{Domain Controller}
         L'ambiente \emph{MS Active Directory} e' il cuore pulsante dell'intera infrastruttura di rete, in quanto tutta 
          la gestione dell'autenticazione, e dei relativi permessi dedicati a ogni singolo utente, dagli amministratori
-         di sistema agli studenti, viene gestita tramite questo sitema.
+         di sistema agli studenti, viene gestita tramite quest'importante servizio.
         Abbiamo optato per una configurazione basata su due domain controller, uno per plesso, in modo da garantire la
          continuita' del servizio anche in caso di problemi hardware.
         Le macchine sono strutturate come segue:
