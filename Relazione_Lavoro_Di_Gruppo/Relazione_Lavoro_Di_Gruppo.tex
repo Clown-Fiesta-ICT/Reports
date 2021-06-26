@@ -126,12 +126,13 @@
              questa mansione.
 
     \chapter{Diagramma Di Rete e Topologia}
+    \begin{sloppypar}
         \author{Volgarino Livio}
         \section{La Struttura In Generale}
         Come precedentemente specificato, la struttura di rete e' stata ideata principalmente da Volgarino Livio, ed e
          implementata dedicando particolare attenzione ad alcuni aspetti giudicati pilastri fondamentali del progetto:
          \begin{itemize}
-             \item La separazione delle reti: e' stato scelto di progettare due reti separate e largamente indipe ndenti
+             \item La separazione delle reti: e' stato scelto di progettare due reti separate e largamente indipendenti
               in modo da rendere piu' agevole l'installazione e il mantenimento, inoltre un eventuale fallimento
               dell'infrastruttura in uno dei due edifici non penalizzerebbe la didattica all'interno del secondo plesso.
              \item L'utilizzo di indirizzamento statico per i dispositivi fissi, propri dell'istituto (quali, per esempio,
@@ -140,28 +141,56 @@
              \item Filtraggio di tutto il traffico da parte di router/firewall che agiscono da endpoint per ognuno dei due
               plessi, cio' permette di innalzare lo standard di sicurezza, in quanto tutto il traffico nella sua interezza
               viene analizzato.
+             \item Connessione dei due plessi tramite l'ausilio di una \emph{VPN} gestita da due \emph{New Generation
+             Firewall}, che fungono anche da endpoint per entrambe le reti.
          \end{itemize}
         Andremo ora a spiegare nel dettaglio l'architettura, aiutati dal diagramma di rete redatto tramite il precedentemente
          citato strumento di creazione grafici e diagrammi \emph{Draw.io}.
         \section{Il Diagramma}
         La rete nel suo complesso puo' essere riassunta tramite l'ausilio del seguente diagramma:
 
-        \begin{figure} [h]
+        \begin{figure}[h]
             \centering
-            %\includegraphics [scale=0.1] {Schema_Di_Rete_Completo_1.png}
-            \includegraphics [width=12cm] {Schema_Di_Rete_Completo_1.png}
+            \includegraphics [width=\textwidth] {Schema_Di_Rete_Completo_1.png}
             \caption{Topologia di rete per ambo i plessi scolastici.}
             \label{fig:Diagramma Di Rete}
         \end{figure}
-        Partendo dall'alto, possiamo sibito notare la disposizione e la configurazione dei \emph{New Generation Firewall},
-         data l'enorme importanza che ricoprono all'interno della nostra infrastruttura, abbiamo deciso di optare per una
-         macchina fisica ridondata, per mitigare qualsiasi problema di compromissione anche fisica dell'apparato.
-        
-        Un approccio simile e' stato adottato anche per quanto riguarda la gestione dei \emph{Core Switch}, essendo
-         il cardine della rete per quanto riguarda l'instradamento dei pacchetti, e' stato scelto di ridondarli fiscamente
+        Partendo dall'alto, possiamo subito notare la disposizione e la configurazione dei \emph{New Generation Firewall},
+         data l'enorme importanza che ricoprono all'interno della nostra infrastruttura, abbiamo deciso di optare per la
+         ridondanza dell'intera macchina fisica, cio' permette di mitigare qualsiasi problema di compromissione anche
+         fisica dell'apparato. Data la complessita' del soggetto, abbiamo deciso di dedicare una sezione a parte all'
+         argomento \textit{gestione \emph{New Generation Firewall e VPN} } durante un successivo capitolo.
+
+        Un approccio simile e' stato adottato anche per quanto riguarda la gestione dei \emph{Core Switch}, essendo il
+         cardine della rete per quanto riguarda l'instradamento dei pacchetti, e' stato scelto di ridondarli fiscamente
          permettendo quindi una piu' elevata tolleranza ad eventuali guasti.
+        In generale, l'intera struttura di rete e' gerarchica, composta da un massimo di tre livelli. Il primo e'
+         rappresentato dai due \emph{Core Switch} appena descritti, poi seguono un numero di apparati di \textit{"Secondo
+         Livello"} pari a sei nel primo plesso e a tre nel seconodo. Per terminare con alcuni \emph{Switch} interni ai 
+         vari laboratori, denominati come di \textit{"Terzo Livello"}.
+
+         Continuando verso il basso, possiamo notare il posizionamento dei due \emph{Domain Controller}, collegati
+         direttamente con entrambi i \emph{Core Switch} in maniera da poter mantenere la continuita' del servizio a 
+         prescindere dallo switch in uso in quel momento. Per via della necessita' di contenere i costi, abbiamo optato per
+         non ridondare fisicamente tutte le macchine al di sotto del \textit{"Secondo Livello"}. Cio' ovviamente potrebbe
+         compromettere l'accesso ad \emph{Active Direcory} a tutta l'area coperta da uno switch di \textit{"Secondo"} o
+         \textit{"Terzo"} livello.
+
+        Sullo schema di rete e' poi illustrato il numero di postazioni \emph{Desktop} collegati allo \emph{Switch}, 
+         insieme al numero di \emph{Access Point} atti a creare un uniforme copertura wireless per l'interezza di
+         entrambi i plessi.
+    \end{sloppypar}
     \chapter{Sicurezza E Firewall}
         \author{Serena Thomas}
+        Come precedentemente specificato, per la gestione \emph{Firewall} abbiamo optato per il depoloy di un totale di
+         quattro macchine fisiche, ridondate due a due. Essendo esse gli endpoint di entrambe le reti semi-indipendenti 
+         presenti nei due plessi scolastici, assicurarne il corretto funzionamento e' essenziale per poter mantenere
+         il servizio.
+        
+        I firewall sono direttamente connessi all'provider tramite connessione a \textcolor{Red}{Inserire Larghezza 
+         Della Banda}, come si puo' notare non sono presenti \emph{Router} all'interno dell'infrastruttura, cio' perche'
+         abbiamo scelto di accorpare gli apparati per poter contenere i costi e mantenere comunque alto lo standard 
+         qualitativo.
     \chapter{Microsoft Active Directory e Windows Licensing}
         \author{Catone Mario}
         \section{Domain Controller}
