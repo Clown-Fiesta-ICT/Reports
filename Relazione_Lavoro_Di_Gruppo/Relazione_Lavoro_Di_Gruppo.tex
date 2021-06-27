@@ -167,9 +167,13 @@
         In generale, l'intera struttura di rete e' gerarchica, composta da un massimo di tre livelli. Il primo e'
          rappresentato dai due \emph{Core Switch} appena descritti, poi seguono un numero di apparati di \textit{"Secondo
          Livello"} pari a sei nel primo plesso e a tre nel seconodo. Per terminare con alcuni \emph{Switch} interni ai 
-         vari laboratori, denominati come di \textit{"Terzo Livello"}.
+         vari laboratori, denominati come di \textit{"Terzo Livello"}. Per una questione di praticita' nell'illustrazione,
+         abbiamo tracciato solamente i collegamenti tra ogni \emph{Switch} di \textit{"Secondo Livello"} e uno dei due 
+         \emph{Core Switch}. Il grafico e' quindi da intendersi con un altro set di collegamenti tra ogni \emph{Switch}
+         ed entrambi i \emph{Core Switch}, in maniera da poter rentere utile la ridondanza esplicata nel precedente
+         paragrafo.
 
-         Continuando verso il basso, possiamo notare il posizionamento dei due \emph{Domain Controller}, collegati
+        Continuando verso il basso, possiamo notare il posizionamento dei due \emph{Domain Controller}, collegati
          direttamente con entrambi i \emph{Core Switch} in maniera da poter mantenere la continuita' del servizio a 
          prescindere dallo switch in uso in quel momento. Per via della necessita' di contenere i costi, abbiamo optato per
          non ridondare fisicamente tutte le macchine al di sotto del \textit{"Secondo Livello"}. Cio' ovviamente potrebbe
@@ -179,6 +183,11 @@
         Sullo schema di rete e' poi illustrato il numero di postazioni \emph{Desktop} collegati allo \emph{Switch}, 
          insieme al numero di \emph{Access Point} atti a creare un uniforme copertura wireless per l'interezza di
          entrambi i plessi.
+
+        Per quanto riguarda la rete wireless in istituto, e' stato scelto di isolare tutti i device \textit{"Ospiti"}, ossia
+         non connessi tramite rete cablata, su una \emph{Vlan} differente rispetto al resto dei dispositivi. Questa scelta 
+         e' stata operata alla luce delle possibili falle di sicurezza che comporterebbe introdurre apparecchiature 
+         esterne all'infrastruttura su una rete interna.
     \end{sloppypar}
     \chapter{Sicurezza E Firewall}
         \author{Serena Thomas}
@@ -188,9 +197,17 @@
          il servizio.
         
         I firewall sono direttamente connessi all'provider tramite connessione a \textcolor{Red}{Inserire Larghezza 
-         Della Banda}, come si puo' notare non sono presenti \emph{Router} all'interno dell'infrastruttura, cio' perche'
-         abbiamo scelto di accorpare gli apparati per poter contenere i costi e mantenere comunque alto lo standard 
-         qualitativo.
+         Della Banda}, come si puo' notare non sono presenti \emph{Router} all'interno dell'infrastruttura. Questa 
+         scelta e' stata pilotata dalla necessita' di contenere i costi, e di mantenere l'infrastruttura il piu'
+         semplice possibile per permettere una manutenzione agevole da parte del personale tecnico scolastico.
+
+        Le mansioni principali che il \emph{Firewall} si trovera' a svolgere sono le seguenti:
+        \begin{itemize}
+            \item Instradamento Pacchetti.
+            \item Policy Per La Navigazione.
+            \item Fornitura Indirizzi Ip
+            \item Tunnel VPN
+        \end{itemize}
     \chapter{Microsoft Active Directory e Windows Licensing}
         \author{Catone Mario}
         \section{Domain Controller}
