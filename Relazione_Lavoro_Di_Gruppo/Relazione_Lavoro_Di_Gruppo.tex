@@ -191,23 +191,53 @@
     \end{sloppypar}
     \chapter{Sicurezza E Firewall}
         \author{Serena Thomas}
+        \section{Introduzione All'Infrastruttura}
         Come precedentemente specificato, per la gestione \emph{Firewall} abbiamo optato per il depoloy di un totale di
          quattro macchine fisiche, ridondate due a due. Essendo esse gli endpoint di entrambe le reti semi-indipendenti 
          presenti nei due plessi scolastici, assicurarne il corretto funzionamento e' essenziale per poter mantenere
          il servizio.
-        
-        I firewall sono direttamente connessi all'provider tramite connessione a \textcolor{Red}{Inserire Larghezza 
-         Della Banda}, come si puo' notare non sono presenti \emph{Router} all'interno dell'infrastruttura. Questa 
-         scelta e' stata pilotata dalla necessita' di contenere i costi, e di mantenere l'infrastruttura il piu'
-         semplice possibile per permettere una manutenzione agevole da parte del personale tecnico scolastico.
+        I firewall sono direttamente connessi con il provider tramite connessione a 1GBPS, essi svolgono sia la funzione 
+         di \emph{Router} che di \emph{Firewall}, esploreremo piu' avanti questo argomento con esaustivita'.
 
         Le mansioni principali che il \emph{Firewall} si trovera' a svolgere sono le seguenti:
-        \begin{itemize}
+        \begin{enumerate}
             \item Instradamento Pacchetti.
             \item Policy Per La Navigazione.
-            \item Fornitura Indirizzi Ip
-            \item Tunnel VPN
-        \end{itemize}
+            \item Fornitura Indirizzi IP.
+            \item Tunnel VPN.
+        \end{enumerate}
+        \section{Aspetti Principali}
+        \subsection{Instradamento Pacchetti}
+            Come annunciato in precedenza, i due \emph{Firewall} si andranno a posizionare a sostituzione degli apparati
+             che normalmente assolverebbero alla funzione di \emph{Router} in modo da avere un solo dispositivo che svolga
+             più mansioni: in questo modo, verra' sia ridotta la latenza introdotta da un analisi del traffico posteriore,
+             sia l'ingombro fisico degli apparati, semplficando dunque la manutenzione e l'organizzazione.
+
+             Per svolgere questo compito verranno introdotte delle \emph{Tabelle di Routing} nella configurazione delle due
+             macchine in modo che queste sappiano dove inoltrare ogni singolo pacchetto con un determinato indirizzo IP.
+        \subsection{Policy Di Navicagione e Autenticazione}
+            Un altro aspetto della configurazione dei due \emph{Firewall} riguarda le \emph{Policy} di navigazione: il
+             principio e' quello di creare \emph{Policy} differenziate a seconda del gruppo al quale afferisce ciascun utente 
+             che sta navigando attraverso la rete scolastica. Verranno quindi create \emph{Policy} specifiche per studenti,
+             docenti, personale (amministrativo e ATA) ed ospiti con differenti limitazioni in base a determinate categorie
+             di siti web. Saranno per tutti bloccate alcune categorie di contenuti non ritenute consone ad un ambiente
+             scolastico, (ad esempio alcool, droghe e pornografia) inoltre alcune non ritenute utili o potenzialmente
+             dannose ai fini dell'apprendimento o della sicurezza, ad esempio (Intrattenimento e hacking).
+             Alcuni siti e piattaforme come i vari social network, Netflix, Twitch e assimilabili saranno bloccati
+             indipendentemente dall'utenza (in modo da evitare che vengano consultati tramite la rete scolastica in orario
+             non consono) ma, nel caso nel quale ci siano richieste particolari, potra' essere concessa maggiore liberta' di
+             navigazione ad alcune categorie di utenti, cio' allo scopo di permettere al corpo docente di poter trasmettere
+             contenuti educativi agli studenti.
+
+             La gestione dell’autenticazione e della conseguente applicazione
+             della \emph{Policy} corretta al soggetto autenticato verra' gestita attraverso i server \emph{Active
+             Directory}: nel momento in cui un utente tentera' di effettuare del traffico internet,
+             apparira' un pop-up che richiederà l’inserimento delle proprie credenziali di dominio
+             (o le credenziali da ospite fornite presso la reception) e i \emph{Firewall} si occuperanno di
+             interrogare i server di autenticazione per sapere se quell’utenza e' legittimata ad
+             effettuare traffico all’interno della rete scolastica e, nel caso in cui lo sia, quali tipi di
+             piattaforme potra' visitare basandosi sulla \emph{Policy} collegata al suo gruppo di
+             appartenenza.
     \chapter{Microsoft Active Directory e Windows Licensing}
         \author{Catone Mario}
         \section{Domain Controller}
@@ -250,10 +280,16 @@
          particolarmente intensive dal punto di vista computazionale.
         Le funzioni principali di queste due macchine sono sintetizzabili come segue:
         \begin{enumerate}
-            \item Server di autenticazione per l'intera infrastruttura.
+            \item Server di autenticazione per l'inte        \begin{itemize}
+                \item Instradamento Pacchetti.
+                \item Policy Per La Navigazione.
+                \item Fornitura Indirizzi IP.
+                \item Tunnel VPN.
+            \end{itemize}ra infrastruttura.
             \item Gestione Shared Directory.
             \item Gestione Roaming Profiles.
         \end{enumerate}
+        \section{Funzioni Principali Domain Controller}
             \subsection{Server Di Autenticazione}
             Il ruolo di \textbf{Server Di Autenticazione} da parte del \emph{Domain Controller} e' di vitale importanza
              per il corretto funzionamento dell'infrastruttura nel suo complesso. Esso permette di gestire su base di 

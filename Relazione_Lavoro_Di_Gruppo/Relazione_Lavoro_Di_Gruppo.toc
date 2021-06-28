@@ -9,9 +9,14 @@
 \contentsline {section}{\numberline {3.1}La Struttura In Generale}{6}{}%
 \contentsline {section}{\numberline {3.2}Il Diagramma}{7}{}%
 \contentsline {chapter}{\numberline {4}Sicurezza E Firewall}{9}{}%
-\contentsline {chapter}{\numberline {5}Microsoft Active Directory e Windows Licensing}{10}{}%
-\contentsline {section}{\numberline {5.1}Domain Controller}{10}{}%
-\contentsline {subsection}{\numberline {5.1.1}Server Di Autenticazione}{11}{}%
-\contentsline {subsection}{\numberline {5.1.2}Gestione Shared Directory}{12}{}%
-\contentsline {subsection}{\numberline {5.1.3}Gestione Roaming Profiles}{13}{}%
-\contentsline {chapter}{\numberline {6}Considerazioni Finali}{14}{}%
+\contentsline {section}{\numberline {4.1}Introduzione All'Infrastruttura}{9}{}%
+\contentsline {section}{\numberline {4.2}Aspetti Principali}{9}{}%
+\contentsline {subsection}{\numberline {4.2.1}Instradamento Pacchetti}{9}{}%
+\contentsline {subsection}{\numberline {4.2.2}Policy Di Navicagione e Autenticazione}{10}{}%
+\contentsline {chapter}{\numberline {5}Microsoft Active Directory e Windows Licensing}{11}{}%
+\contentsline {section}{\numberline {5.1}Domain Controller}{11}{}%
+\contentsline {section}{\numberline {5.2}Funzioni Principali Domain Controller}{12}{}%
+\contentsline {subsection}{\numberline {5.2.1}Server Di Autenticazione}{12}{}%
+\contentsline {subsection}{\numberline {5.2.2}Gestione Shared Directory}{13}{}%
+\contentsline {subsection}{\numberline {5.2.3}Gestione Roaming Profiles}{14}{}%
+\contentsline {chapter}{\numberline {6}Considerazioni Finali}{16}{}%
