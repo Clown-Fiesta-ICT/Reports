@@ -215,7 +215,7 @@
 
              Per svolgere questo compito verranno introdotte delle \emph{Tabelle di Routing} nella configurazione delle due
              macchine in modo che queste sappiano dove inoltrare ogni singolo pacchetto con un determinato indirizzo IP.
-        \subsection{Policy Di Navicagione e Autenticazione}
+        \subsection{Policy Di Navigazione e Autenticazione}
             Un altro aspetto della configurazione dei due \emph{Firewall} riguarda le \emph{Policy} di navigazione: il
              principio e' quello di creare \emph{Policy} differenziate a seconda del gruppo al quale afferisce ciascun utente 
              che sta navigando attraverso la rete scolastica. Verranno quindi create \emph{Policy} specifiche per studenti,
@@ -229,15 +229,41 @@
              navigazione ad alcune categorie di utenti, cio' allo scopo di permettere al corpo docente di poter trasmettere
              contenuti educativi agli studenti.
 
-             La gestione dell’autenticazione e della conseguente applicazione
-             della \emph{Policy} corretta al soggetto autenticato verra' gestita attraverso i server \emph{Active
-             Directory}: nel momento in cui un utente tentera' di effettuare del traffico internet,
-             apparira' un pop-up che richiederà l’inserimento delle proprie credenziali di dominio
-             (o le credenziali da ospite fornite presso la reception) e i \emph{Firewall} si occuperanno di
-             interrogare i server di autenticazione per sapere se quell’utenza e' legittimata ad
-             effettuare traffico all’interno della rete scolastica e, nel caso in cui lo sia, quali tipi di
+             La gestione dell’autenticazione e della conseguente applicazione della \emph{Policy} corretta al soggetto
+             autenticato verra' gestita attraverso i server \emph{Active Directory}: nel momento in cui un utente tentera'
+             di effettuare del traffico internet, apparira' un pop-up che richiederà l’inserimento delle proprie
+             credenziali di dominio (o le credenziali da ospite fornite presso la reception) e i \emph{Firewall}
+             si occuperanno di interrogare i server di autenticazione per sapere se quell’utenza e' legittimata
+             ad effettuare traffico all’interno della rete scolastica e, nel caso in cui lo sia, quali tipi di
              piattaforme potra' visitare basandosi sulla \emph{Policy} collegata al suo gruppo di
              appartenenza.
+        \subsection{Fornitura Indirizzi IP}
+            Una delle principali mansioni dei \emph{Firewall} e' la fornitura di \emph{Indirizzi IP} ai dispositivi che ne
+             fanno richiesta attraverso la configurazione del servizio \emph{DHCP}. Si e' scelto di avere un piano di
+             indirizzamento fisso per quanto riguarda i dispositivi interni alle sedi connessi via cavo, mentre di
+             fornire indirizzi variabili ai dispositivi ospiti: in questo modo i \emph{Firewall} dovranno gestire le
+             richieste \emph{DHCP} di un numero limitato di dispositivi collegati alla rete e, in caso di bug o
+             problemi di sorta, il troubleshooting sara' notevolmente piu' agile, in quanto l'identificazione
+             del dispositivo sara' univoca rispetto al dipositivo.
+        \subsection{Tunnel VPN}
+            Infine, per mettere in comunicazione le due sedi e' stato pensato di intrudurre un \emph{Tunnel VPN}
+             tra le interfacce esterne dei \emph{Firewall}: in questo modo il traffico che e' diretto da una sede
+             all’altra sara' instradato all’interno di questo tunnel virtuale e viaggera' attraverso internet in
+             totale sicurezza da un edificio all’altro. La necessita' di questo collegamento si puo' ricercare nella
+             necessita' di mettere in collegamento i due \emph{Domain Controller}, in questo modo essi possono mantenere
+             sincronizzazione tra loro, e in caso di failure tecnico di una delle due macchine, garantire almeno parte 
+             del servizio ad entrambi i gruppi di edifici.
+            La tabella riportata di seguito mostra i parametri utilizzati per la configurazione del \emph{Tunnel VPN} tra le
+             due sedi.
+             \begin{center}
+                 \begin{tabular}{ |c|c|c|c|c| }
+                     \hline
+                       & Plesso 1 &   & Plesso 2 &   \\
+                     \hline \hline
+                       Peer & IP Pubblico Plesso 1&   & IP Pubblico Plesso 2 &   \\
+                     \hline
+                 \end{tabular}
+             \end{center}
     \chapter{Microsoft Active Directory e Windows Licensing}
         \author{Catone Mario}
         \section{Domain Controller}
