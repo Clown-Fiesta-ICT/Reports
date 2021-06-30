@@ -1,0 +1,24 @@
+\contentsline {chapter}{\numberline {1}Introduzione}{2}{}%
+\contentsline {section}{\numberline {1.1}La Sfida}{2}{}%
+\contentsline {section}{\numberline {1.2}Il Team}{3}{}%
+\contentsline {chapter}{\numberline {2}Organizzazione E Strumenti}{4}{}%
+\contentsline {section}{\numberline {2.1}Comunicazione}{4}{}%
+\contentsline {section}{\numberline {2.2}Strumenti Tecnici}{4}{}%
+\contentsline {section}{\numberline {2.3}Definizione Dei Ruoli}{5}{}%
+\contentsline {chapter}{\numberline {3}Diagramma Di Rete e Topologia}{6}{}%
+\contentsline {section}{\numberline {3.1}La Struttura In Generale}{6}{}%
+\contentsline {section}{\numberline {3.2}Il Diagramma}{7}{}%
+\contentsline {chapter}{\numberline {4}Sicurezza E Firewall}{10}{}%
+\contentsline {section}{\numberline {4.1}Introduzione All'Infrastruttura}{10}{}%
+\contentsline {section}{\numberline {4.2}Aspetti Principali}{10}{}%
+\contentsline {subsection}{\numberline {4.2.1}Instradamento Pacchetti}{10}{}%
+\contentsline {subsection}{\numberline {4.2.2}Policy Di Navigazione e Autenticazione}{11}{}%
+\contentsline {subsection}{\numberline {4.2.3}Fornitura Indirizzi IP}{11}{}%
+\contentsline {subsection}{\numberline {4.2.4}Tunnel VPN}{11}{}%
+\contentsline {chapter}{\numberline {5}Microsoft Active Directory e Windows Licensing}{13}{}%
+\contentsline {section}{\numberline {5.1}Domain Controller}{13}{}%
+\contentsline {section}{\numberline {5.2}Funzioni Principali Domain Controller}{14}{}%
+\contentsline {subsection}{\numberline {5.2.1}Server Di Autenticazione}{14}{}%
+\contentsline {subsection}{\numberline {5.2.2}Gestione Shared Directory}{15}{}%
+\contentsline {subsection}{\numberline {5.2.3}Gestione Roaming Profiles}{16}{}%
+\contentsline {chapter}{\numberline {6}Considerazioni Finali}{18}{}%

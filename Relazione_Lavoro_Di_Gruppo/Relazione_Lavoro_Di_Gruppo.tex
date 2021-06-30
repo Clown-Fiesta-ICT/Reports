@@ -158,12 +158,11 @@
         Partendo dall'alto, possiamo subito notare la disposizione e la configurazione dei \emph{New Generation Firewall},
          data l'enorme importanza che ricoprono all'interno della nostra infrastruttura, abbiamo deciso di optare per la
          ridondanza dell'intera macchina fisica, cio' permette di mitigare qualsiasi problema di compromissione anche
-         fisica dell'apparato. Data la complessita' del soggetto, abbiamo deciso di dedicare una sezione a parte all'
-         argomento \textit{gestione \emph{New Generation Firewall e VPN} } durante un successivo capitolo.
-
+         fisica dell'apparato. Data la complessita' del soggetto, abbiamo deciso di dedicare una sezione a parte
+         all'argomento \textit{gestione \emph{New Generation Firewall e VPN} } durante un successivo capitolo.
         Un approccio simile e' stato adottato anche per quanto riguarda la gestione dei \emph{Core Switch}, essendo il
          cardine della rete per quanto riguarda l'instradamento dei pacchetti, e' stato scelto di ridondarli fiscamente
-         permettendo quindi una piu' elevata tolleranza ad eventuali guasti.
+         permettendo quindi una piu' elevata tolleranza ad eventuali guasti.\linebreak
         In generale, l'intera struttura di rete e' gerarchica, composta da un massimo di tre livelli. Il primo e'
          rappresentato dai due \emph{Core Switch} appena descritti, poi seguono un numero di apparati di \textit{"Secondo
          Livello"} pari a sei nel primo plesso e a tre nel seconodo. Per terminare con alcuni \emph{Switch} interni ai 
@@ -171,23 +170,41 @@
          abbiamo tracciato solamente i collegamenti tra ogni \emph{Switch} di \textit{"Secondo Livello"} e uno dei due 
          \emph{Core Switch}. Il grafico e' quindi da intendersi con un altro set di collegamenti tra ogni \emph{Switch}
          ed entrambi i \emph{Core Switch}, in maniera da poter rentere utile la ridondanza esplicata nel precedente
-         paragrafo.
-
+         paragrafo.\linebreak
         Continuando verso il basso, possiamo notare il posizionamento dei due \emph{Domain Controller}, collegati
          direttamente con entrambi i \emph{Core Switch} in maniera da poter mantenere la continuita' del servizio a 
          prescindere dallo switch in uso in quel momento. Per via della necessita' di contenere i costi, abbiamo optato per
          non ridondare fisicamente tutte le macchine al di sotto del \textit{"Secondo Livello"}. Cio' ovviamente potrebbe
          compromettere l'accesso ad \emph{Active Direcory} a tutta l'area coperta da uno switch di \textit{"Secondo"} o
-         \textit{"Terzo"} livello.
-
+         \textit{"Terzo"} livello.\linebreak
         Sullo schema di rete e' poi illustrato il numero di postazioni \emph{Desktop} collegati allo \emph{Switch}, 
          insieme al numero di \emph{Access Point} atti a creare un uniforme copertura wireless per l'interezza di
-         entrambi i plessi.
-
+         entrambi i plessi.\linebreak
         Per quanto riguarda la rete wireless in istituto, e' stato scelto di isolare tutti i device \textit{"Ospiti"}, ossia
          non connessi tramite rete cablata, su una \emph{Vlan} differente rispetto al resto dei dispositivi. Questa scelta 
          e' stata operata alla luce delle possibili falle di sicurezza che comporterebbe introdurre apparecchiature 
-         esterne all'infrastruttura su una rete interna.
+         esterne all'infrastruttura su una rete interna.\linebreak
+        E' infine necessario spendere qualche parola sulla disposizione fisica all'interno dei due plessi scolastici di tutti
+         gli apparati. Abbiamo optato per il posizionamento di tutti gli \emph{Switch} si \textit{"Secondo Livello"}
+         all'interno di appositi armati posizionati strategicamente all'interno dei corridoi dei piani assegnati. Cio'
+         permette di mantenere uno standard di sicurezza elevato, in quanto sorvegliati da tutti gli insegnanti presenti 
+         durante le pause nei corridoi. E' poi semplice cestire la cablatura degli edifici tramite la constrosoffittatura
+         e l'aggiunta di canaline sospese dove necessario.
+        Per quanto riguarda gli \emph{Access Point}, abbiamo deciso di posizionarli come in Figura
+         \ref{fig:Diagramma Access Point IT} e in Figura \ref{fig:Diagramma Access Point SEL}:
+
+        \begin{figure}[h]
+            \center
+            \includegraphics [scale=0.07, angle=90] {Posizione_AP_IT.png}
+            \caption{Posizionamento Degli Access Point Plesso IT.}
+            \label{fig:Diagramma Access Point IT}
+        \end{figure}
+        \begin{figure}[h]
+            \center
+            \includegraphics [scale=0.06, angle=90] {Posizione_AP_SEL}
+            \caption{Posizionamento Degli Access Point Plesso SEL.}
+            \label{fig:Diagramma Access Point SEL}
+        \end{figure}
     \end{sloppypar}
     \chapter{Sicurezza E Firewall}
         \author{Serena Thomas}
@@ -282,7 +299,7 @@
                     \hline
                       & 3600 &   & 3600 &   \\
                     \hline
-                     000.000.000.000 & 000.000.000.000 & 000.000.000.000 & 000.000.000.000 & 000.000.000.000 \\
+                     Rete Locale \\ Rete Remota & 192.168.001.000/24 & 192.168.002.000/24 & 192.168.002.000/24 & 192.168.001.000/24 \\
                     \hline
                  \end{tabular}
              \end{center}
@@ -443,8 +460,15 @@
              la condizione di accesso si sposta dal semplice accesso fisico alla macchina, all'ottenimento dei
              dati di accesso di un account con privilegi elevati.
     \chapter{Considerazioni Finali}
-        \author{Oglietti Riccardo}
-            Personalmente ho trovato questo progetto estremamente interessante e stimolante, ci ha permesso di
-             affinare le nostre skill di temwork oltre alla parte tecnica. La coesione del nostro team ha
-             sicuramente contribuito a rendere l'intera esperienza piu' piacevole e collaborativa.
+            \begin{itemize}
+                \item Oglietti Riccardo\\
+                    Personalmente ho trovato questo progetto estremamente interessante e stimolante, ci ha permesso di
+                    affinare le nostre skill di temwork oltre alla parte tecnica. La coesione del nostro team ha
+                    sicuramente contribuito a rendere l'intera esperienza piu' piacevole e collaborativa.
+                \item Volgarino Livio\\
+                    Il progetto e' stato molto interressante perche' ci ha permesso di confrontarci con un team e un progetto
+                    rele. Le tempistiche sono state ottime dandoci la possibilità di poter cambiare e agire su ogni piccola
+                    parte del progetto, un esperienza utile e divertente. 
+            \end{itemize}
+ 
 \end{document}
