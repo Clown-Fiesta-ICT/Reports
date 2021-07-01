@@ -45,14 +45,13 @@ Volgarino Livio}
 			La progettazione e' stata portata avanti tenendo conto di alcuni punti fondamentali, quali la necessita' di 
 			fornire scalabilita' e facilita' di manutenzione da parte dei tecnici presenti all'interno dell'infrastruttura 
 			scolastica, e la necessita' di un controllo capillare della sicurezza tramite l'utlizzo di alcuni strumenti 
-			fondamentali quali l'infrastruttura MS Active Directory e l'utilizzo di firewall integrati con essa. 
+			fondamentali quali la tecnologia \emph{MS Active Directory} e l'utilizzo di firewall integrati con essa. 
 
 			Un'altra sezione sicuramente fondamentale del progetto e' sicuramente quella legata all'organizzazione di un 
 			gruppo di lavoro il piu' efficiente e produttivo possibile, atto a risolvere un problema complesso nella sua 
 			struttura. Cio' ci ha permesso di venire in contatto con alcune delle piu' comuni difficolta' del lavoro di
-			gruppo
-			e di imparare molto su come gestirle, inoltre, trattandosi del primo vero progetto di gruppo per molti di noi 
-			l'entusiasmo si e' dimostrato molto fin dalla prima lezione.
+			gruppo e di imparare molto su come gestirle, inoltre, trattandosi del primo vero progetto di gruppo per molti
+			di noi l'entusiasmo si e' dimostrato molto fin dalla prima lezione.
 
 		\section{Il Team}
 			Il gruppo classe e' stata suddivisa in sette differenti gruppi, il nostro gruppo, il numero due, e' formato dai 
@@ -79,7 +78,7 @@ Volgarino Livio}
 			La nostra scelta si e' orientata verso alcuni strumenti chiave: innanzitutto abbiamo optato per la scelta
 			della piattaforma \emph{Telegram} per la messaggistica istantanea e le comunicazioni piu' rilevanti grazie
 			alle ampie possibilita' di gestione del gruppo, quale la possibilita' di rendere un messaggio prioritario o
-			evidenziato. Abbiamo poi deciso di usare lo strumento \emph{GIT} per coordinare la gestione dei documenti
+			evidenziato. Abbiamo poi deciso di usare lo strumento \emph{git} per coordinare la gestione dei documenti
 			prodotti da ogni membro del gruppo. Infine, abbiamo optato per lo strumento di conferenza \emph{Discord} per
 			gestire gli incontri in remoto al di fuori dell'orario scolastico.
 		\section{Strumenti Tecnici}
@@ -138,12 +137,12 @@ Volgarino Livio}
 					in modo da rendere piu' agevole l'installazione e il mantenimento, inoltre un eventuale fallimento
 					dell'infrastruttura in uno dei due edifici non penalizzerebbe la didattica all'interno del secondo plesso.
 				\item L'utilizzo di indirizzamento statico per i dispositivi fissi, propri dell'istituto (quali, per esempio,
-					postazioni all'interno dei laboratori informatici in ambo i plessi), estremamente utile per mantenere un'
-					estrema semplicita' di gestione e di troubleshooting.
-				\item Filtraggio di tutto il traffico da parte di router/firewall che agiscono da endpoint per ognuno dei due
+					postazioni all'interno dei laboratori informatici in ambo i plessi), estremamente utile per mantenere
+					la semplicita' di gestione e di troubleshooting.
+				\item Filtraggio di tutto il traffico da parte di \emph{Router/Firewall} che agiscono da endpoint per ognuno dei due
 					plessi, cio' permette di innalzare lo standard di sicurezza, in quanto tutto il traffico nella sua interezza
 					viene analizzato.
-				\item Connessione dei due plessi tramite l'ausilio di una \emph{VPN} gestita da due \emph{New Generation
+				\item Connessione dei due plessi tramite l'ausilio di una \emph{VPN} gestita da i due \emph{New Generation
 					Firewall}, che fungono anche da endpoint per entrambe le reti.
 			\end{itemize}
 			Andremo ora a spiegare nel dettaglio l'architettura, aiutati dal diagramma di rete redatto tramite il precedentemente
@@ -159,7 +158,7 @@ Volgarino Livio}
 			\end{figure}
 			Partendo dall'alto, possiamo subito notare la disposizione e la configurazione dei \emph{New Generation Firewall},
 			data l'enorme importanza che ricoprono all'interno della nostra infrastruttura, abbiamo deciso di optare per la
-			ridondanza dell'intera macchina fisica, cio' permette di mitigare qualsiasi problema di compromissione anche
+			ridondanza dell'intera macchina, cio' permette di mitigare qualsiasi problema di compromissione anche
 			fisica dell'apparato. Data la complessita' del soggetto, abbiamo deciso di dedicare una sezione a parte
 			all'argomento \textit{gestione \emph{New Generation Firewall e VPN} } durante un successivo capitolo.
 
@@ -222,7 +221,7 @@ Volgarino Livio}
 	\author{Serena Thomas}
 		\section{Introduzione All'Infrastruttura}
 			Come precedentemente specificato, per la gestione \emph{Firewall} abbiamo optato per il depoloy di un totale di
-			quattro macchine fisiche, ridondate due a due. Essendo esse gli endpoint di entrambe le reti semi-indipendenti 
+			quattro macchine fisiche, ridondate a coppie. Essendo esse gli endpoint di entrambe le reti semi-indipendenti 
 			presenti nei due plessi scolastici, assicurarne il corretto funzionamento e' essenziale per poter mantenere
 			il servizio.
 			I firewall sono direttamente connessi con il provider tramite connessione a 1GBPS, essi svolgono sia la funzione 
@@ -273,7 +272,7 @@ Volgarino Livio}
 				fornire indirizzi variabili ai dispositivi ospiti: in questo modo i \emph{Firewall} dovranno gestire le
 				richieste \emph{DHCP} di un numero limitato di dispositivi collegati alla rete e, in caso di bug o
 				problemi di sorta, il troubleshooting sara' notevolmente piu' agile, in quanto l'identificazione
-				del dispositivo sara' univoca rispetto al dipositivo.
+				del dispositivo sara' semplificata dalla conoscenza del suo indirizzo \emph{IP}.
 			\subsection{Tunnel VPN}
 				Infine, per mettere in comunicazione le due sedi e' stato pensato di intrudurre un \emph{Tunnel VPN}
 				tra le interfacce esterne dei \emph{Firewall}: in questo modo il traffico che e' diretto da una sede
@@ -357,12 +356,13 @@ Volgarino Livio}
 			particolarmente intensive dal punto di vista computazionale.
 			Le funzioni principali di queste due macchine sono sintetizzabili come segue:
 			\begin{enumerate}
-				\item Server di autenticazione per l'inte        \begin{itemize}
+				\item Server di autenticazione per l'intera infrastruttura.
+					\begin{itemize}
 						\item Instradamento Pacchetti.
 						\item Policy Per La Navigazione.
 						\item Fornitura Indirizzi IP.
 						\item Tunnel VPN.
-					\end{itemize}ra infrastruttura.
+					\end{itemize}
 				\item Gestione Shared Directory.
 				\item Gestione Roaming Profiles.
 			\end{enumerate}
